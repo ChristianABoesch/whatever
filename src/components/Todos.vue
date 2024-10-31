@@ -74,7 +74,6 @@ onMounted(() => {
    
     <button @click="callFunction()">Query Google Gemini</button>
     <br />
-    <button @click="callBedrock()">Query Bedrock Claude</button>
     <pre>{{ helloMessage }}</pre>
     <br />
     <button @click="createTodo">+ new</button>
@@ -88,6 +87,7 @@ onMounted(() => {
     <div>
       🥳 Try querying the LLM.
       <br />
+      <h3>Christian was here ...</h3>
     </div>
   </main>
 </template>

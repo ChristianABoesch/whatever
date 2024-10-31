@@ -11,8 +11,8 @@ git clone {repo} {directory}
 cd {directory}
 npm install
 
+npx ampx sandbox secret set API_KEY // Google Gemini API Key
 npx ampx sandbox 
-npm ampx sandbox add API_KEY // Google Gemini API Key
 npm run dev
 
 ## Secrets Needed
@@ -26,20 +26,7 @@ aws logs tail /aws/lambda/{functionName} --follow
 This library is licensed under the MIT-0 License. See the LICENSE file.
 
 ## Action Items: 
-- [x] Get Google API calls working. 
-- [x] Add reactivity. 
-- [x] Pass different prompts to Google LLMs and diplay the results.
-- [x] Get Bedrock API calls working. 
-- [x] Have two buttons able to get responses differently. 
-- [x] Update Bedrock API to pass the given prompt and respond to properly. 
-- [x] Pick a common pattern for arranging functions.
-- [x] Secure the application to only support logged in users. 
-- [x] Add support for CDK resoruces and ensure those resources can be accessed from the Amplify stack. 
-- [x] Pass SQS URL to lambda function via env parameters. 
-- [x] Create a CDK lambda function that monitors the SQS queue. 
-- [x] Call a lambda function exposed by a stack. Have processQueueFunction call HelloCdkStack.HelloWorldFunction
-- [x] Figure out how to log events from stack lambda functions back to the local console. 
-- [x] Be able to build GUIs that can call lambda functions and sqs queues exposed by stacks. 
+- [ ] Update the text area with the value of the to-do
 
 ## You can list all non-deleted stacks
 aws cloudformation list-stacks --query 'StackSummaries[?StackStatus!=`DELETE_COMPLETE`].[StackName]' --output text
