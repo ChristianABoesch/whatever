@@ -10,6 +10,9 @@ const client = generateClient<Schema>();
 const todos = ref<Array<Schema['Todo']["type"]>>([]);
 const helloMessage = ref('Ready');
 const prompt = ref('Please write a haiku about coding.')
+const updatePrompt = (content: string) => {
+  prompt.value = content;
+}
 
 function listTodos() {
   client.models.Todo.observeQuery().subscribe({
@@ -80,7 +83,8 @@ onMounted(() => {
     <ul>
       <li 
         v-for="todo in todos" 
-        :key="todo.id">
+        :key="todo.id"
+        @click="updatePrompt(todo.content!)">
         {{ todo.content }}
       </li>
     </ul>
