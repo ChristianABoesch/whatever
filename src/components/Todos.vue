@@ -71,7 +71,7 @@ onMounted(() => {
 
 <template>
   <main>
-    <h1>Prompt</h1>
+    <h1>Write thy query here for the machine:</h1>
     <textarea v-model="prompt" placeholder="add multiple lines" rows=4
     cols=40></textarea>
    
@@ -91,7 +91,7 @@ onMounted(() => {
     <div>
       🥳 Try querying the LLM.
       <br />
-      <h3>Christian was here ...</h3>
+      <h3>This product was made by Chris and has since been passed on to his son, Chris Jr.<h2>And the best part is, it works.</h2></h3>
     </div>
   </main>
 </template>

@@ -11,8 +11,13 @@ git clone {repo} {directory}
 cd {directory}
 npm install
 
+# To setup the API Key
 npx ampx sandbox secret set API_KEY // Google Gemini API Key
+
+# To run the backend on AWS
 npx ampx sandbox 
+
+# To run the Vue frontend locally
 npm run dev
 
 ## Secrets Needed
